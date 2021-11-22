@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:paddingHorizontal="60dp">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Dodaj lek"
+            android:id="@+id/add_medicine_button"
+            android:layout_above="@+id/show_all_medicines_button"
+            android:layout_centerHorizontal="true"
+            android:textSize="10dp"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pokaz wszystkie leki"
+            android:layout_centerInParent="true"
+            android:id="@+id/show_all_medicines_button"
+            android:textSize="10dp"
+            android:layout_marginVertical="15dp"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pokaz leki z krotkim terminem waznosci"
+            android:id="@+id/show_medicines_with_short_termin_button"
+            android:layout_below="@+id/show_all_medicines_button"
+            android:layout_centerHorizontal="true"
+            android:textSize="10dp"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>
