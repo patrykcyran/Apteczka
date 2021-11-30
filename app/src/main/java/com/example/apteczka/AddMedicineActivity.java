@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class AddMedicineActivity extends AppCompatActivity
 {
@@ -29,13 +30,13 @@ public class AddMedicineActivity extends AppCompatActivity
             @Override
             public void onClick(View v)
             {
-                dataBaseAccess = MedicinesDataBaseAccess.getInsatnce(getApplicationContext());
                 medicineName = String.valueOf(MedicineName.getText());
                 day = Integer.parseInt(String.valueOf(MedicineDay.getText()));
                 month = Integer.parseInt(String.valueOf(MedicineMonth.getText()));
                 year = Integer.parseInt(String.valueOf(MedicineYear.getText()));
+                Toast.makeText(getApplicationContext(), day + " " + month + " " + year, Toast.LENGTH_SHORT).show();
                 dataBaseAccess.open();
-                dataBaseAccess.addMedicine(medicineName, year, month, day);
+                dataBaseAccess.addMedicine(medicineName, day, month, year);
                 dataBaseAccess.close();
 
                 finish();
@@ -51,5 +52,7 @@ public class AddMedicineActivity extends AppCompatActivity
         MedicineYear = findViewById(R.id.medicine_add_medicine_year_editText);
 
         addMedicineButton = findViewById(R.id.medicine_add_button);
+
+        dataBaseAccess = MedicinesDataBaseAccess.getInsatnce(getApplicationContext());
     }
 }

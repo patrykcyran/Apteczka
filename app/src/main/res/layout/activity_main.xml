@@ -13,13 +13,13 @@
         android:paddingHorizontal="60dp">
 
         <Button
+            android:id="@+id/add_medicine_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Dodaj lek"
-            android:id="@+id/add_medicine_button"
             android:layout_above="@+id/show_all_medicines_button"
             android:layout_centerHorizontal="true"
-            android:textSize="10dp"/>
+            android:text="Dodaj lek"
+            android:textSize="10dp" />
 
         <Button
             android:layout_width="match_parent"

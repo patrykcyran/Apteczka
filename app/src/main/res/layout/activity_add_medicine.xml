@@ -17,43 +17,43 @@
 
 
     <EditText
+        android:id="@+id/medicine_add_medicine_name_editText"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/add_medicine_textView"
-        android:hint="Nazwa leku"
+        android:layout_marginLeft="30dp"
         android:layout_marginTop="30dp"
-        android:layout_marginLeft="30dp"
-        android:id="@+id/medicine_add_medicine_name_editText"/>
+        android:hint="Nazwa leku" />
 
     <EditText
-        android:layout_width="40dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/medicine_add_medicine_name_editText"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="30dp"
         android:id="@+id/medicine_add_medicine_day_editText"
-        android:hint="DD"
-        android:inputType="number"/>
-
-    <EditText
         android:layout_width="40dp"
         android:layout_height="wrap_content"
-        android:layout_toRightOf="@+id/medicine_add_medicine_day_editText"
         android:layout_below="@+id/medicine_add_medicine_name_editText"
+        android:layout_marginLeft="30dp"
         android:layout_marginTop="10dp"
-        android:id="@+id/medicine_add_medicine_month_editText"
-        android:hint="MM"
-        android:inputType="number"/>
+        android:hint="DD"
+        android:inputType="number" />
 
     <EditText
+        android:id="@+id/medicine_add_medicine_month_editText"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/medicine_add_medicine_name_editText"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/medicine_add_medicine_day_editText"
+        android:hint="MM"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/medicine_add_medicine_year_editText"
         android:layout_width="60dp"
         android:layout_height="wrap_content"
-        android:layout_toRightOf="@+id/medicine_add_medicine_month_editText"
         android:layout_below="@+id/medicine_add_medicine_name_editText"
         android:layout_marginTop="10dp"
-        android:id="@+id/medicine_add_medicine_year_editText"
+        android:layout_toRightOf="@+id/medicine_add_medicine_month_editText"
         android:hint="YYYY"
-        android:inputType="number"/>
+        android:inputType="number" />
 
     <Button
         android:layout_width="wrap_content"

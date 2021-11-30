@@ -4,15 +4,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 
-public class ShowAllMedicinesActivity extends AppCompatActivity
+public class ShortExpireDateMedicines extends AppCompatActivity
 {
+
     private ArrayList<Medicine> medicines = new ArrayList<>();
     private RecyclerView medicinesRecView;
     private MedicinesListRecViewAdapter adapter;
@@ -23,7 +22,7 @@ public class ShowAllMedicinesActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_show_all_medicines);
+        setContentView(R.layout.activity_short_expire_date);
 
         initViews();
     }
@@ -32,13 +31,13 @@ public class ShowAllMedicinesActivity extends AppCompatActivity
     {
         adapter = new MedicinesListRecViewAdapter();
 
-        medicinesRecView = findViewById(R.id.medicines_RecyclerView);
+        medicinesRecView = findViewById(R.id.short_expire_date_medicines_RecyclerView);
 
         medicinesRecView.setAdapter(adapter);
         medicinesRecView.setLayoutManager(new LinearLayoutManager(this));
         dataBaseAccess = MedicinesDataBaseAccess.getInsatnce(this);
         dataBaseAccess.open();
-        medicines = dataBaseAccess.getAllMedicinesAtoZ();
+        medicines = dataBaseAccess.getShortExpireDateMedicines();
         dataBaseAccess.close();
         adapter.setMedicines(medicines);
     }
@@ -48,7 +47,7 @@ public class ShowAllMedicinesActivity extends AppCompatActivity
     {
         super.onStart();
         dataBaseAccess.open();
-        medicines = dataBaseAccess.getAllMedicinesAtoZ();
+        medicines = dataBaseAccess.getShortExpireDateMedicines();
         dataBaseAccess.close();
         adapter.setMedicines(medicines);
         adapter.notifyDataSetChanged();

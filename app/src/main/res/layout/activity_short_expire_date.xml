@@ -9,19 +9,20 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Wszystkie posiadane leki:"
+        android:text="Leki z krótkim terminem ważności \n(2 miesące):"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
         android:textSize="22dp"
-        android:id="@+id/all_medicines_textView"/>
+        android:textAlignment="center"
+        android:id="@+id/short_expire_date_medicines_textView"/>
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/all_medicines_textView">
+        android:layout_below="@+id/short_expire_date_medicines_textView">
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/medicines_RecyclerView"
+            android:id="@+id/short_expire_date_medicines_RecyclerView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
 

@@ -26,42 +26,53 @@
         android:id="@+id/medicine_edit_medicine_name_editText"/>
 
     <EditText
-        android:layout_width="40dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/medicine_edit_medicine_name_editText"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="30dp"
         android:id="@+id/medicine_edit_medicine_day_editText"
-        android:hint="DD"
-        android:inputType="number"/>
-
-    <EditText
         android:layout_width="40dp"
         android:layout_height="wrap_content"
-        android:layout_toRightOf="@+id/medicine_edit_medicine_day_editText"
         android:layout_below="@+id/medicine_edit_medicine_name_editText"
+        android:layout_marginLeft="30dp"
         android:layout_marginTop="10dp"
-        android:id="@+id/medicine_edit_medicine_month_editText"
-        android:hint="MM"
-        android:inputType="number"/>
+        android:hint="DD"
+        android:inputType="number" />
 
     <EditText
+        android:id="@+id/medicine_edit_medicine_month_editText"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/medicine_edit_medicine_name_editText"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/medicine_edit_medicine_day_editText"
+        android:hint="MM"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/medicine_edit_medicine_year_editText"
         android:layout_width="60dp"
         android:layout_height="wrap_content"
-        android:layout_toRightOf="@+id/medicine_edit_medicine_month_editText"
         android:layout_below="@+id/medicine_edit_medicine_name_editText"
         android:layout_marginTop="10dp"
-        android:id="@+id/medicine_edit_medicine_year_editText"
+        android:layout_toRightOf="@+id/medicine_edit_medicine_month_editText"
         android:hint="YYYY"
-        android:inputType="number"/>
+        android:inputType="number" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Edytuj lek"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="30dp"
         android:layout_marginBottom="50dp"
         android:id="@+id/medicine_edit_button"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Usuń lek"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="50dp"
+        android:id="@+id/medicine_delete_button"/>
 
 </RelativeLayout>

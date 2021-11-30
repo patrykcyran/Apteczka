@@ -13,7 +13,7 @@ public class EditMedicineActivity extends AppCompatActivity
 {
 
     private EditText MedicineName, MedicineDay, MedicineMonth, MedicineYear;
-    private Button editMedicineButton;
+    private Button editMedicineButton, deleteMedicineButton;
     private MedicinesDataBaseAccess dataBaseAccess;
     private String medicineName;
     private int ID, day, month, year;
@@ -32,13 +32,25 @@ public class EditMedicineActivity extends AppCompatActivity
             @Override
             public void onClick(View v)
             {
-                dataBaseAccess = MedicinesDataBaseAccess.getInsatnce(getApplicationContext());
                 medicineName = String.valueOf(MedicineName.getText());
                 day = Integer.parseInt(String.valueOf(MedicineDay.getText()));
                 month = Integer.parseInt(String.valueOf(MedicineMonth.getText()));
                 year = Integer.parseInt(String.valueOf(MedicineYear.getText()));
                 dataBaseAccess.open();
                 dataBaseAccess.editMedicine(ID, medicineName, year, month, day);
+                dataBaseAccess.close();
+
+                finish();
+            }
+        });
+
+        deleteMedicineButton.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                dataBaseAccess.open();
+                dataBaseAccess.deleteMedicine(ID);
                 dataBaseAccess.close();
 
                 finish();
@@ -54,6 +66,7 @@ public class EditMedicineActivity extends AppCompatActivity
         MedicineYear = findViewById(R.id.medicine_edit_medicine_year_editText);
 
         editMedicineButton = findViewById(R.id.medicine_edit_button);
+        deleteMedicineButton = findViewById(R.id.medicine_delete_button);
 
         intent = getIntent();
         MedicineName.setText(intent.getStringExtra("NAME"));
@@ -61,5 +74,7 @@ public class EditMedicineActivity extends AppCompatActivity
         MedicineMonth.setText(String.valueOf(intent.getIntExtra("MONTH",0)));
         MedicineYear.setText(String.valueOf(intent.getIntExtra("YEAR",0)));
         ID = intent.getIntExtra("ID",0);
+
+        dataBaseAccess = MedicinesDataBaseAccess.getInsatnce(getApplicationContext());
     }
 }

@@ -3,13 +3,14 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Programowanie/Android_Studio_Projects/Apteczka/app/src/main/res/layout/activity_add_medicine.xml" value="0.5322916666666667" />
-        <entry key="..\:/Programowanie/Android_Studio_Projects/Apteczka/app/src/main/res/layout/activity_edit_medicine.xml" value="0.67" />
+        <entry key="..\:/Programowanie/Android_Studio_Projects/Apteczka/app/src/main/res/layout/activity_add_medicine.xml" value="0.33" />
+        <entry key="..\:/Programowanie/Android_Studio_Projects/Apteczka/app/src/main/res/layout/activity_edit_medicine.xml" value="0.33" />
         <entry key="..\:/Programowanie/Android_Studio_Projects/Apteczka/app/src/main/res/layout/activity_edit_medicine2.xml" value="0.5322916666666667" />
-        <entry key="..\:/Programowanie/Android_Studio_Projects/Apteczka/app/src/main/res/layout/activity_main.xml" value="0.5322916666666667" />
-        <entry key="..\:/Programowanie/Android_Studio_Projects/Apteczka/app/src/main/res/layout/activity_show_all_medicines.xml" value="0.4203703703703704" />
+        <entry key="..\:/Programowanie/Android_Studio_Projects/Apteczka/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/Programowanie/Android_Studio_Projects/Apteczka/app/src/main/res/layout/activity_short_expire_date.xml" value="0.4351747463359639" />
+        <entry key="..\:/Programowanie/Android_Studio_Projects/Apteczka/app/src/main/res/layout/activity_show_all_medicines.xml" value="0.33" />
         <entry key="..\:/Programowanie/Android_Studio_Projects/Apteczka/app/src/main/res/layout/fragment_second.xml" value="0.5322916666666667" />
-        <entry key="..\:/Programowanie/Android_Studio_Projects/Apteczka/app/src/main/res/layout/medicines_list.xml" value="0.5" />
+        <entry key="..\:/Programowanie/Android_Studio_Projects/Apteczka/app/src/main/res/layout/medicines_list.xml" value="0.33" />
         <entry key="..\:/Programowanie/Android_Studio_Projects/Apteczka/app/src/main/res/layout/medicines_lsit.xml" value="0.5212962962962963" />
       </map>
     </option>

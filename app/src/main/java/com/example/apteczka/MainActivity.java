@@ -10,7 +10,7 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity
 {
-    private Button AddBtn, ShowAllMedicines, ShowShortTerminMedicines;
+    private Button AddBtn, ShowAllMedicines, ShowShortExpireDateMedicines;
     private Context mContext = this;
 
     @Override
@@ -41,12 +41,21 @@ public class MainActivity extends AppCompatActivity
             }
         });
 
+        ShowShortExpireDateMedicines.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                Intent intent = new Intent(getApplicationContext(), ShortExpireDateMedicines.class);
+                startActivity(intent);
+            }
+        });
     }
 
     private void initViews()
     {
         AddBtn = findViewById(R.id.add_medicine_button);
         ShowAllMedicines = findViewById(R.id.show_all_medicines_button);
-        ShowShortTerminMedicines = findViewById(R.id.show_medicines_with_short_termin_button);
+        ShowShortExpireDateMedicines = findViewById(R.id.show_medicines_with_short_termin_button);
     }
 }
